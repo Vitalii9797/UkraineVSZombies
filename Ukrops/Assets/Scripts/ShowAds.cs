@@ -48,7 +48,7 @@ public class ShowAds : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowListen
     {
         while (true)
         {
-            yield return new WaitForSeconds(150);
+            yield return new WaitForSeconds(120);
             LoadAd();
         }
     }
