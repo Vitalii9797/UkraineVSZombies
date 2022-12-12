@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Soldier : MonoBehaviour
@@ -29,9 +28,9 @@ public class Soldier : MonoBehaviour
     {
         if(weaponLoaded && gameManager.bayraktar.isActive == false)
         {
-            soldierAnim.SetTrigger("shoot");
             shootSound.Play();
             shotParticle.Play();
+            soldierAnim.SetTrigger("shoot");
             weaponLoaded = false;
             StartCoroutine(Reload(fireRate));
         }

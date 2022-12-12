@@ -113,6 +113,13 @@ public class GameManager : MonoBehaviour
 
     }
 
+    private void Update()
+    {
+        if(Input.touchCount > 0)
+        {
+            soldier.Shoot();
+        }
+    }
     private int SetSoldierUpgradeCost()
     {
         if(soldiers.soldierIndex == 0)

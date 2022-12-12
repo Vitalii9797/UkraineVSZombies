@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ZombieTank : MonoBehaviour
@@ -11,8 +10,7 @@ public class ZombieTank : MonoBehaviour
     [SerializeField] private float walkSpeed;
     [SerializeField] private ParticleSystem fire;
     [SerializeField] private AudioSource fireSound;
-    [SerializeField] private BoxCollider2D boxCollider1;
-    [SerializeField] private BoxCollider2D boxCollider2;
+    [SerializeField] private BoxCollider2D boxCollider;
 
     private bool canWalk = true;
     private GameManager gameManager;
@@ -89,8 +87,7 @@ public class ZombieTank : MonoBehaviour
         fireSound.Play();
         spriteRenderer.color = new Color(0.4f, 0.4f, 0.4f);
         canWalk = false;
-        boxCollider1.enabled = false;
-        boxCollider2.enabled = false;   
+        boxCollider.enabled = false;   
         animator.enabled = false;
         Destroy(this.gameObject, 2f);
     }

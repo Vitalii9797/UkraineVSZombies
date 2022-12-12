@@ -4824,7 +4824,6 @@ GameObject:
   - component: {fileID: 7726616158374927039}
   - component: {fileID: 7726616158374927008}
   - component: {fileID: 5080273199162467326}
-  - component: {fileID: 6251704154660810291}
   - component: {fileID: 5271472580196192396}
   - component: {fileID: 8309098129493727071}
   m_Layer: 0
@@ -4944,32 +4943,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 6
---- !u!61 &6251704154660810291
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7726616158374927009}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.27183914, y: -1.5023257}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 11.56, y: 8.25}
-    newSize: {x: 11.56, y: 8.25}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 8.947372, y: 3.326568}
-  m_EdgeRadius: 0
 --- !u!61 &5271472580196192396
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4983,7 +4956,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.65882313, y: 1.994096}
+  m_Offset: {x: 0.35751104, y: -0.43957758}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -4994,7 +4967,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.268947, y: 3.239924}
+  m_Size: {x: 6.209181, y: 5.233219}
   m_EdgeRadius: 0
 --- !u!114 &8309098129493727071
 MonoBehaviour:
@@ -5014,8 +4987,7 @@ MonoBehaviour:
   walkSpeed: 0.3
   fire: {fileID: 7726616157711911571}
   fireSound: {fileID: 8572907963794917917}
-  boxCollider1: {fileID: 6251704154660810291}
-  boxCollider2: {fileID: 5271472580196192396}
+  boxCollider: {fileID: 5271472580196192396}
 --- !u!1001 &1362311077489523133
 PrefabInstance:
   m_ObjectHideFlags: 0
