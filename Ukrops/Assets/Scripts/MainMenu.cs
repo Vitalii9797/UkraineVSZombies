@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.Advertisements;
 
 
-public class MainMenu : MonoBehaviour
+public class MainMenu : MonoBehaviour, IUnityAdsInitializationListener
 {
     [SerializeField] AudioSource clickSound;
     [SerializeField] Button soundButton;
@@ -16,6 +17,11 @@ public class MainMenu : MonoBehaviour
 
     private int firstEntry;
     private int rated;
+
+    private void Awake()
+    {
+       StartCoroutine(InitializeAds()); 
+    }
 
     private void Start()
     {
@@ -121,5 +127,22 @@ public class MainMenu : MonoBehaviour
         Application.Quit();
     }
 
-    
+    public void OnInitializationComplete()
+    {
+        Debug.Log("Ads initialization successful");
+    }
+
+    public void OnInitializationFailed(UnityAdsInitializationError error, string message)
+    {
+        Debug.Log("Ads initialization failed" + message);
+    }
+
+    private IEnumerator InitializeAds()
+    {
+        while (!Advertisement.isInitialized)
+        {
+            Advertisement.Initialize("4894971", false, this);
+            yield return new WaitForEndOfFrame();
+        }
+    }
 }
